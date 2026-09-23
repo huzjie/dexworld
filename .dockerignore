@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.git/
+checkpoints/
+.venv/
+tests/
+docs/

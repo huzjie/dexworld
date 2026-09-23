@@ -1,0 +1,43 @@
+# dexworld 触觉世界模型示例配置
+
+tactile:
+  dim: 8
+  regions_per_hand: 17
+
+vision:
+  height: 32
+  width: 32
+  channels: 1
+
+action:
+  dim: 7
+  horizon: 16
+
+model:
+  backend: mock          # mock / openai_compat
+  hidden_dim: 64
+  num_layers: 4
+  hbridge_heads: 8
+  denoise_steps: 20
+  beta_start: 0.0001
+  beta_end: 0.02
+  api_base: ""           # openai_compat 后端
+  api_key: ""
+  model_name: ""
+
+train:
+  epochs: 5
+  batch_size: 8
+  lr: 0.0003
+  seed: 42
+  log_interval: 1
+  checkpoint_dir: checkpoints
+
+data:
+  trajectories: 32
+  seq_len: 8
+  sim_episodes: 64
+
+eval:
+  rollout_horizon: 16
+  top_k_plans: 8

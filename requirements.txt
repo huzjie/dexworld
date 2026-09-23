@@ -1,0 +1,2 @@
+# dexworld 零依赖，以下均为可选
+numpy>=1.20; python_version >= "3.8"

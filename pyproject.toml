@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dexworld"
+version = "1.0.0"
+description = "多模态触觉世界模型训练与推理框架（受 ME-Dex-1.0 启发）"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "Apache-2.0"}
+authors = [{name = "智能交付知识工程组"}]
+keywords = ["tactile", "world-model", "robotics", "diffusion", "embodied-ai"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+numpy = ["numpy>=1.20"]
+
+[tool.setuptools.packages.find]
+include = ["dexworld*"]
